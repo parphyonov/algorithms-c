@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+ * Рекурсивный алгоритм печати простых делителей числа
+ * начиная с наибольшего
+ */
+
+// вспомогательная функция печати делителя
 void print_factor(unsigned last, unsigned n) {
   if (n == 0) return;
 
@@ -9,6 +15,7 @@ void print_factor(unsigned last, unsigned n) {
     printf("%u^%u ", last, n);
 }
 
+// рекурсивная функция
 void simple_factors(unsigned a, unsigned last, unsigned n) {
   if (a <= 1) {
     print_factor(last, n);
@@ -25,6 +32,7 @@ void simple_factors(unsigned a, unsigned last, unsigned n) {
 
 int main(void) {
   unsigned num = 0;
+
   scanf("%u", &num);
 
   simple_factors(num, 2, 0);
