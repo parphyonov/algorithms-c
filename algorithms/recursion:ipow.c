@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/*
+ * Рекурсивный алгоритм решения этой задачи:
+ * https://stepik.org/lesson/592538/step/4?unit=587533
+ */
+
 long long ipow(int a, int n, int* calls) {
   if (n == 0) return 1;
   if (n == 1) return a;
